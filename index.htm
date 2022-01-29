@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background: #4a4a4c;
+        }
+        *{
+            margin: 0;
+            font-family: 'poppins', sans-serif;
+        }
+        .container{
+            border-radius: 12px;
+            border: 2px solid green;
+            padding: 20px;
+            margin: auto;
+            max-width: 400px;
+            font-weight: 400px;
+            color: #fff;
+           
+        }
+
+        .container.active{
+            filter: blur(5px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .card img{
+            max-width: 100%;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        #read{
+            display: block;
+            outline: none;
+            border: none;
+            margin: 20px;
+            width: 120px;
+            height: 30px;
+            background-color: green;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: .3s ease-in;
+        }
+
+        #read:hover{
+            transform: scaleX(1.06);
+        }
+
+        .popup{
+            position: absolute;
+            background-color: #4a4a4c;
+            padding: 2em;
+            visibility: hidden;
+            opacity: 0;
+            border-radius: 12px;
+            border: 2px solid green;
+            padding: 20px;
+            margin: auto;
+            max-width: 400px;
+            font-weight: 400px;
+            color: #fff;
+            transition: all .6s ease-in;
+        }
+
+        .popup.active{
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container" id="card">
+        <div class="card">
+            <img src="https://graffersid.com/wp-content/uploads/2021/04/cover-image.png" alt="">
+        </div>
+        harum nostrum cupiditate quis. Nostrum nam accusamus dolores neque saepe maxime, voluptatibus incidunt numquam temporibus cumque a. Atque totam impedit deleniti, esse autem iusto.
+        Culpa provident rerum quos illum quas. Distinctio ipsam soluta ullam ea totam ut harum eos, atque nihil sunt minima repudiandae odio quas tempore vel hic minus adipisci. Maiores, et perspiciatis.
+        <button id="read" onclick="toggle()">Read more</button>
+    </div>
+    <div class=" popup" id="popup">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Soluta temporibus totam nihil quas repellendus quisquam porro 
+        iusto natus omnis ad neque vel magni unde, 
+        debitis aut enim corporis voluptatum consectetur!
+
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Soluta temporibus totam nihil quas repellendus quisquam porro 
+        iusto natus omnis ad neque vel magni unde, 
+
+        debitis aut enim corporis voluptatum consectetur!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Soluta temporibus totam nihil quas repellendus quisquam porro 
+        iusto natus omnis ad neque vel magni unde, 
+        debitis aut enim corporis voluptatum consectetur!
+
+        <button id="read" onclick="toggle()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
